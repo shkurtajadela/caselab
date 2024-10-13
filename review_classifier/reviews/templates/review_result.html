@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+    <title>Результат Отзыва</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Результат анализа отзыва</h1>
+        <p><strong>Текст отзыва:</strong> {{ review.text }}</p>
+        <p><strong>Оценка:</strong> {{ review.predicted_rating }}</p>
+        <p><strong>Статус отзыва:</strong> {{ review.sentiment }}</p>
+        <a href="{% url 'submit_review' %}">Оценить еще один отзыв</a>
+    </div>
+</body>
+</html>
